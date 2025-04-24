@@ -1,0 +1,5 @@
+{
+  "source_chat": "source_channel_id",
+  "target_chat": "target_channel_id",
+  "owner_id": "your_owner_id"
+}
