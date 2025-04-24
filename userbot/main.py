@@ -1,12 +1,22 @@
-import os
+import json
+from pyrogram import Client
 import logging
-from pyrogram import Client, filters
-from database.manager import DatabaseManager
+
+# Read the config.json
+def load_config():
+    with open('config/config.json') as f:
+        return json.load(f)
+
+config = load_config()
+
+API_ID = config["API_ID"]
+API_HASH = config["API_HASH"]
+USERBOT_SESSION = config["USERBOT_SESSION"]
 
 logging.basicConfig(level=logging.INFO)
 
 class UserBot:
-    def __init__(self, db: DatabaseManager):
+    def __init__(self, db):
         self.app = Client("userbot", api_id=API_ID, api_hash=API_HASH, session_string=USERBOT_SESSION)
         self.db = db
 
@@ -22,7 +32,7 @@ class UserBot:
 
     async def run(self):
         await self.app.start()
-        self.app.add_handler(filters.chat(self.config["source_chat"]) & (filters.video | filters.document), self.download_media)
+        self.app.add_handler(filters.chat(config["source_chat"]) & (filters.video | filters.document), self.download_media)
         me = await self.app.get_me()
         logging.info(f"Userbot started as {me.first_name}")
         await asyncio.Event().wait()  # Keep running indefinitely
