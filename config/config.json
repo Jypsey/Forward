@@ -1,5 +1,14 @@
 {
+  "API_ID": "27657909",
+  "API_HASH": "2387c3c1a4830bc72c32bf61a1d590e8",
+  "USERBOT_SESSION": "BQGmBrUAuoW_Tpw4JesKnP-HuwlJq1_K0VCpDEYCorrZhcYcds5-MZoJp4gyFKvIQGbkrfmbYOekM6Je5L6EA4cpJVuHmtsze4eI8wv6NMGHDJ3sifNp6JG9vXtqUELz4MKFEATrfM19pWHGdAlpEV87oIyYNN1VGSAAZKBfJyAaGSXbTyqvnfrEjOt3pPZGiC5YayNO0TpkI8pTbF6aXUy-2GM0lZVqNvyzxiAiN8RD9jqTn0iH3JzSI8cumTvdELy7hRudeB-6MuCMmCbiGuzdZGDUuXs0VP8hfOIBwGCmOYy22GAkOMV4eeorzw5OJHtvIacWcfJXBIx5eqIsLSwvv7QoswAAAAHeX_-CAA",
+  "BOT_TOKEN": "7702796376:AAHtPdFCGbF4BqdOMYLP2JeIa4J0SATf3IE",
+  "OWNER_ID": "8025800578",
+  "DB_NAME": "telegram_forwarder2",
+  "DB_USER": "postgres",
+  "DB_PASSWORD": "OK2024",
+  "DB_HOST": "localhost",
+  "DB_PORT": "5432",
   "source_chat": "source_channel_id",
-  "target_chat": "target_channel_id",
-  "owner_id": "your_owner_id"
+  "target_chat": "target_channel_id"
 }
